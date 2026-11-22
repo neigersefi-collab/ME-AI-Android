@@ -3,16 +3,12 @@ name: Android APK build
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "ME_AI_Source.zip"
-      - ".github/workflows/build-apk.yml"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Java
